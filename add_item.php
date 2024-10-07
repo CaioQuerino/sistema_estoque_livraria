@@ -84,7 +84,7 @@ include_once 'database.php';
     
             if ($result_client->num_rows > 0) {
                 // Verificar se há estoque disponível e obter o preço do livro
-                $sql_check_stock = "SELECT s.quantity_stock, b.price, b.id_branch 
+                $sql_check_stock = "SELECT s.quantity_stock, b.price, b.id_branch, b.title 
                                     FROM stocks s 
                                     INNER JOIN books b ON s.ISBN = b.ISBN 
                                     WHERE s.ISBN = ?";
@@ -113,7 +113,14 @@ include_once 'database.php';
     
                         // Registrar a entrada no caixa
                         $amount = $row_stock['price'] * $quantity;
-                        $description = "Venda de Livro ISBN $ISBN para CPF $CPF";
+
+                        // Obter o título do livro
+                        $book_title = $row_stock['title'];
+
+                        // Formatar a descrição separando os detalhes
+                        $description = sprintf("Venda de Livro:\nTítulo: %s\nISBN: %s\nQuantidade: %d\nCliente: %s", 
+                                                $book_title, $ISBN, $quantity, $CPF);
+
                         $sql_insert_cash_flow = "INSERT INTO cash_flow (transaction_type, amount, description) VALUES ('entrada', ?, ?)";
                         $stmt_insert_cash_flow = $conn->prepare($sql_insert_cash_flow);
                         $stmt_insert_cash_flow->bind_param("ds", $amount, $description);
