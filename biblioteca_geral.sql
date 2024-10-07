@@ -62,7 +62,6 @@ CREATE TABLE cash_flow (
     id INT AUTO_INCREMENT PRIMARY KEY,
     transaction_type ENUM('entrada', 'saida') NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
-    
     description TEXT NOT NULL,
     transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
