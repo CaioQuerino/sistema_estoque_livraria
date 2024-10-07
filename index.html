@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Caio Querino</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            position: fixed;
+            height: 100%;
+            width: 250px;
+            background-color: #0d1117;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .profile-header {
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 50px;
+        }
+        .profile-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .profile-header p {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                float: left;
+                padding: 15px;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="text-center">
+            <img src="./src/assets/caio.png" alt="Caio Querino" class="profile-img">
+            <h4 class="text-white">Caio Querino</h4>
+        </div>
+        <a href="#home"><i class="fas fa-home"></i>Home</a>
+        <a href="#sobre"><i class="fas fa-user"></i>Sobre</a>
+        <a href="#minimundo"><i class="fas fa-globe"></i>Minimundo</a>
+        <a href="#modelo-conceitual"><i class="fas fa-diagram-project"></i>Modelo Conceitual</a>
+        <a href="#modelo-logico"><i class="fas fa-database"></i>Modelo Lógico</a>
+        <a href="#modelo-fisico"><i class="fas fa-cubes"></i>Modelo Físico</a>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Caio Querino</h1>
+            <p>Eu sou Proativo</p>
+        </div>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Bem-vindo meu projeto!</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Sou um Desenvolvedor Front-End em início de carreira, com uma base sólida em HTML5, CSS3, JavaScript e PHP. Tenho experiência na criação de interfaces de usuário responsivas e interativas, utilizando tecnologias modernas como Bootstrap e TailwindCSS. Atualmente, meu foco está em React e TypeScript. Sou apaixonado por entregar soluções eficazes e estou sempre buscando aprimorar minhas habilidades e aplicar as melhores práticas no desenvolvimento web. Além disso, utilizo ferramentas como Figma para design de UI/UX e possuo conhecimento em controle de versão com Git e GitHub. Meu objetivo é evoluir para Desenvolvedor Full Cycle, sempre buscando aprender novas tecnologias e expandir meu conhecimento para criar soluções ainda mais completas.</p>
+        </section>
+        <section id="minimundo">
+            <h2>Minimundo</h2>
+            <p>Uma livraria deseja criar um sistema de gestão de estoque e vendas. A livraria vende livros que possuem um título, um ISBN único e são escritos por um ou mais autores. Cada autor tem um nome e um identificador único.
+                A livraria possui diversas filiais, e cada filial tem um endereço e um identificador único. Cada filial pode ter várias cópias de um livro em estoque, e o estoque pode variar entre as filiais.
+                Clientes frequentam a livraria e realizam compras. Cada cliente tem um CPF único, nome e endereço de e-mail. Cada compra é realizada em uma única filial e pode incluir múltiplos livros. A data da compra também é registrada.
+            </p>
+        </section>
+        <section id="modelo-conceitual">
+            <h2>Modelo Conceitual</h2>
+            <p>Detalhes sobre o modelo conceitual.</p>
+        </section>
+        <section id="modelo-logico">
+            <h2>Modelo Lógico</h2>
+            <p>Detalhes sobre o modelo lógico.</p>
+        </section>
+        <section id="modelo-fisico">
+            <h2>Modelo Físico</h2>
+            <p>Detalhes sobre o modelo físico.</p>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
